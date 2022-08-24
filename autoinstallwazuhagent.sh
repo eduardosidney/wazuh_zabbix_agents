@@ -17,11 +17,11 @@ EOF
 
 
 
-Deploy a Wazuh agent
+#Deploy a Wazuh agent
 
 WAZUH_MANAGER="10.0.0.2"
 
-yum install wazuh-agent
+yum install wazuh-agent -y
 
 
 
@@ -31,29 +31,29 @@ systemctl start wazuh-agent
 
 
 
-Solution:
-This error indicates that the server.address field in the /var/ossec/etc/ossec.conf file does not contain a valid IP address.
+#Solution:
+#This error indicates that the server.address field in the /var/ossec/etc/ossec.conf file does not contain a valid IP address.
 
-To fix this run the command
-sudo vim /var/ossec/etc/ossec.conf
-
-
-and change the server.address field to whatever you're server IP address is(127.0.0.1 in my case)
+#To fix this run the command
+#sudo vim /var/ossec/etc/ossec.conf
 
 
-Here the section of the /var/ossec/etc/ossec.conf file where you need to make the change:
+#and change the server.address field to whatever you're server IP address is(127.0.0.1 in my case)
 
-...
-<client>
-    <server>
-      <address>127.0.0.1</address>
-      <port>1514</port>
-      <protocol>tcp</protocol>
-    </server>
-    <config-profile>ubuntu, ubuntu20, ubuntu20.04</config-profile>
-    <notify_time>10</notify_time>
-    <time-reconnect>60</time-reconnect>
-    <auto_restart>yes</auto_restart>
-    <crypto_method>aes</crypto_method>
-</client>
-...
+
+#Here the section of the /var/ossec/etc/ossec.conf file where you need to make the change:
+
+#...
+#<client>
+#    <server>
+#      <address>127.0.0.1</address>
+#      <port>1514</port>
+#      <protocol>tcp</protocol>
+#    </server>
+#    <config-profile>ubuntu, ubuntu20, ubuntu20.04</config-profile>
+#    <notify_time>10</notify_time>
+#    <time-reconnect>60</time-reconnect>
+#    <auto_restart>yes</auto_restart>
+#    <crypto_method>aes</crypto_method>
+#</client>
+#...
