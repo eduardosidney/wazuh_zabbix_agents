@@ -30,4 +30,4 @@ sed -i '117 s/'Server=127.0.0.1'/'Server=168.138.134.255'/' /etc/zabbix/zabbix_a
 ################################################
 
 systemctl restart zabbix-agent
-systemctl start
+systemctl start zabbix-agent
