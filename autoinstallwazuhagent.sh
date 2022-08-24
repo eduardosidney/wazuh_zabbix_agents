@@ -25,9 +25,15 @@ yum install wazuh-agent -y
 
 
 
-systemctl daemon-reload
-systemctl enable wazuh-agent
-systemctl start wazuh-agent
+systemctl daemon-reload && systemctl enable wazuh-agent && systemctl start wazuh-agent
+
+
+
+systemctl restart wazuh-agent.service
+
+systemctl status wazuh-agent.service
+
+
 
 
 
