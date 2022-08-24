@@ -31,6 +31,3 @@ systemctl daemon-reload && systemctl enable wazuh-agent && systemctl start wazuh
 
 
 
-systemctl restart wazuh-agent.service
-
-systemctl status wazuh-agent.service
