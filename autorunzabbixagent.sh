@@ -25,7 +25,7 @@ systemctl enable zabbix-agent
 
 sed -i '117 s/'Server=127.0.0.1'/'Server=168.138.134.255'/' /etc/zabbix/zabbix_agentd.conf
 sed -i '170 s/'ServerActive='/'ServerActive=168.138.134.255'/' /etc/zabbix/zabbix_agentd.conf
-sed -i '181 s/'Zabbix server'/'TSAGLBSRV030'/' /etc/zabbix/zabbix_agentd.conf
+#sed -i '181 s/'Zabbix server'/'TSAGLBSRV030'/' /etc/zabbix/zabbix_agentd.conf
 
 ################################################
 #           Restart and start                  #
