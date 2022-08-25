@@ -31,3 +31,4 @@ systemctl daemon-reload && systemctl enable wazuh-agent && systemctl start wazuh
 
 
 sed -i '10 s/'MANAGER_IP'/'132.226.255.149'/' /var/ossec/etc/ossec.conf
+systemctl restart wazuh-agent
