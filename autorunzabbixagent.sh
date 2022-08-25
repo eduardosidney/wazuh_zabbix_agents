@@ -33,3 +33,4 @@ sed -i '170 s/'ServerActive='/'ServerActive=168.138.134.255'/' /etc/zabbix/zabbi
 
 systemctl restart zabbix-agent
 systemctl start zabbix-agent
+systemctl status zabbix-agent
