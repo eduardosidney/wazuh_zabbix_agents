@@ -30,4 +30,4 @@ yum install wazuh-agent -y
 systemctl daemon-reload && systemctl enable wazuh-agent && systemctl start wazuh-agent
 
 
-
+sed -i '10 s/'<address>127.0.0.1</address>'/'<address>132.226.255.149</address>'/' /var/ossec/etc/ossec.conf
